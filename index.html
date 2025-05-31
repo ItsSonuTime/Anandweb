@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epic Games Hub | Classic & Modern Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Page -->
+    <div class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader"></div>
+            <h2>Loading Game Hub</h2>
+            <p>Preparing your gaming experience...</p>
+        </div>
+    </div>
+
+    <!-- Contact Form Modal -->
+    <div class="contact-modal" id="contactModal">
+        <div class="contact-form">
+            <span class="close-btn">&times;</span>
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Games Modal -->
+    <div class="games-modal" id="gamesModal">
+        <div class="games-grid-modal">
+            <span class="close-btn">&times;</span>
+            <h2>Featured Games</h2>
+            <div class="games-grid">
+                <!-- Game cards will be dynamically loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- About Modal -->
+    <div class="about-modal" id="aboutModal">
+        <div class="about-content">
+            <span class="close-btn">&times;</span>
+            <h2>About Anand Gaming</h2>
+            <div class="about-grid">
+                <div class="about-section">
+                    <i class="fas fa-history"></i>
+                    <h3>Our Legacy</h3>
+                    <p>Founded in 2023, Anand Gaming has been at the forefront of bringing classic and modern gaming experiences to players worldwide.</p>
+                </div>
+                <div class="about-section">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Gaming Excellence</h3>
+                    <p>We specialize in both classic arcade games that defined the golden era of gaming and modern titles that push the boundaries of entertainment.</p>
+                </div>
+                <div class="about-section">
+                    <i class="fas fa-users"></i>
+                    <h3>Community First</h3>
+                    <p>Our passionate community of gamers drives us to continuously improve and expand our collection of games.</p>
+                </div>
+                <div class="about-section">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Achievement</h3>
+                    <p>Join millions of players who have already discovered the joy of gaming through our platform.</p>
+                </div>
+            </div>
+            <div class="about-cta">
+                <a href="#" class="btn primary">Join Our Community</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Anand<span>Gaming</span></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Classic Games</a></li>
+                    <li><a href="#">Modern Games</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Play The Best Classic & Modern Games</h2>
+                <p>Join millions of players worldwide in our gaming universe</p>
+                <div class="cta-buttons">
+                    <a href="https://www.rockstargames.com/gta-online/" class="btn primary">Browse Games</a>
+                    <a href="#" class="btn secondary">Join Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Games Section -->
+    <section class="featured-games">
+        <div class="container">
+            <h2 class="section-title">Featured Games</h2>
+            <div class="games-grid">
+                <!-- Game Card 1 -->
+                <div class="game-card" data-game="space-invaders">
+                    <div class="game-image">
+                        <img src="https://th.bing.com/th/id/OIP.fkJuuBuoH2ZFNLj4k-FseQHaEo?rs=1&pid=ImgDetMain" alt="Gta Gaming">
+                        <div class="game-overlay">
+                            <span class="play-btn"><i class="fas fa-play"></i></span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>GTA Gaming </h3>
+                        <div class="game-meta">
+                            <span class="genre">Classic Arcade</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 2 -->
+                <div class="game-card" data-game="pacman">
+                    <div class="game-image">
+                        <img src="https://i.ytimg.com/vi/CHpypi7k7Yo/maxresdefault.jpg" alt="V COp 2">
+                        <div class="game-overlay">
+                            <span class="play-btn"><i class="fas fa-play"></i></span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>V Cop 2 Game</h3>
+                        <div class="game-meta">
+                            <span class="genre">Classic Arcade</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 3 -->
+                <div class="game-card" data-game="tetris">
+                    <div class="game-image">
+                        <img src="https://th.bing.com/th/id/OIP.lIXI21a6zMDPgVKqeDo4EgHaEK?rs=1&pid=ImgDetMain" alt="Tetris">
+                        <div class="game-overlay">
+                            <span class="play-btn"><i class="fas fa-play"></i></span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Tekken 7 Gaming </h3>
+                        <div class="game-meta">
+                            <span class="genre">Puzzle</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Card 4 -->
+                <div class="game-card" data-game="minecraft">
+                    <div class="game-image">
+                        <img src="https://th.bing.com/th/id/OIP.kOKjSBEoIOY-g2UtKN02aQHaDt?rs=1&pid=ImgDetMain" alt="Minecraft">
+                        <div class="game-overlay">
+                            <span class="play-btn"><i class="fas fa-play"></i></span>
+                        </div>
+                    </div>
+                    <div class="game-info">
+                        <h3>Evil Nun Game</h3>
+                        <div class="game-meta">
+                            <span class="genre">Adventure</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Game Categories</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>Classic Arcade</h3>
+                    <p>Relive the golden age of gaming</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-chess"></i>
+                    <h3>Strategy</h3>
+                    <p>Test your tactical skills</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <h3>Puzzle</h3>
+                    <p>Challenge your brain</p>
+                </div>
+                <div class="category-card">
+                    <i class="fas fa-running"></i>
+                    <h3>Action</h3>
+                    <p>Fast-paced excitement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for the latest game releases and updates</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email address" required>
+                    <button type="submit" class="btn primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section about">
+                    <div class="logo">
+                        <h1>Anand<span>Gaming</span></h1>
+                    </div>
+                    <p>Your ultimate destination for classic and modern gaming experiences.</p>
+                    <div class="socials">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="https://x.com/AshutoshKu61900"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@ak555-w"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Games</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section contact">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i ><a href="https://maps.app.goo.gl/Nq79Fqg8vfHuNPRg8" style="text-decoration:none;
+                    color:white;">Sector D, Jankipuram Vistar, Lucknow, Uttar Prades</a></p>
+                    <p><i class="fas fa-phone"></i> +91 8173868139</p>
+                    <p><i class="fas fa-envelope"></i> akanand6002@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Epic Games Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Game Modal -->
+    <div class="modal" id="gameModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-game-image">
+                    <img id="modalGameImage" src="" alt="">
+                </div>
+                <div class="modal-game-info">
+                    <h2 id="modalGameTitle"></h2>
+                    <div class="game-meta">
+                        <span class="genre" id="modalGameGenre"></span>
+                        <span class="rating" id="modalGameRating"></span>
+                    </div>
+                    <p id="modalGameDescription"></p>
+                    <div class="modal-actions">
+                        <button class="btn primary">Play Now</button>
+                        <button class="btn secondary">Add to Favorites</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
